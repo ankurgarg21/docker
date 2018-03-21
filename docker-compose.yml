@@ -1,0 +1,12 @@
+version: "3"
+services:
+  filebeat-nginx:
+    image: filebeat-nginx-example
+    ports:
+      - "80:80"
+  elkdocker_elk_1:
+    image: elkdocker_elk
+    ports:
+      - "5601:5601"
+      - "9200:9200"
+      - "5044:5044"
